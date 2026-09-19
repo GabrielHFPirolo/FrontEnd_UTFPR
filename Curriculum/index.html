@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>Currículo - Gabriel Henrique Ferreira Pirolo</title>
   </head>
 
@@ -121,5 +128,33 @@
         <p>Universidade Tecnológica Federal do Paraná | 2028</p>
       </div>
     </section>
+    <section class="modal" id="modalSection">
+      <button id="open-modal">Enviar informações de contato</button>
+      <dialog id="modal1">
+        <p>Modal com Formulário</p>
+        <form action="dialog">
+          <label>Nome Completo: <input type="text" name="nome" /></label>
+          <label>Link Intagram: <input type="text" name="link_insta" /></label>
+          <label
+            >Número Whatsapp: <input type="text" name="numero_whatsapp"
+          /></label>
+          <button type="submit">Enviar</button>
+          <button type="button" id="exit">Sair</button>
+        </form>
+      </dialog>
+    </section>
+    <script>
+      const modal = document.getElementById("modal1");
+      const exit = document.getElementById("exit");
+      const openModal = document.getElementById("open-modal");
+
+      openModal.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      exit.addEventListener("click", () => {
+        modal.close();
+      });
+    </script>
   </body>
 </html>
